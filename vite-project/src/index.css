@@ -81,7 +81,7 @@ button:focus-visible {
 }
 .contenedor {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: space-around; 
   margin: 0 auto; 
   gap: 20px;  
@@ -93,3 +93,29 @@ button:focus-visible {
   object-fit: cover;     
   border-radius: 40px;
 }
+@media (max-width: 576px) {
+  body {
+    background: rgb(50, 15, 15);
+  }
+  .contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  header {
+    font-size: 1.8rem;
+    padding: 20px;
+  }
+  h1{
+    font-size: 2.2em;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  footer {
+    font-size: 0.9rem; 
+  }
+}
+
